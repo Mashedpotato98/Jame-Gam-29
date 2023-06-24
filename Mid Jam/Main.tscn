@@ -1,0 +1,36 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Main.gd" type="Script" id=2]
+[ext_resource path="res://Barrier.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Bean.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Score.tscn" type="PackedScene" id=5]
+
+[node name="Main" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="pos1" type="Position2D" parent="."]
+position = Vector2( 22, 570 )
+
+[node name="pos2" type="Position2D" parent="."]
+position = Vector2( 67, 570 )
+
+[node name="pos3" type="Position2D" parent="."]
+position = Vector2( 122, 570 )
+
+[node name="pos4" type="Position2D" parent="."]
+position = Vector2( 182, 570 )
+
+[node name="pos5" type="Position2D" parent="."]
+position = Vector2( 223, 570 )
+
+[node name="Barrier" parent="." instance=ExtResource( 3 )]
+position = Vector2( -2, 643 )
+
+[node name="Bean" parent="." instance=ExtResource( 4 )]
+position = Vector2( 27, 70 )
+
+[node name="Score" parent="." instance=ExtResource( 5 )]
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 58, 562 )
